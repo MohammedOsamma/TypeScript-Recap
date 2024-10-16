@@ -1,6 +1,6 @@
 {
   "scripts": {
     "build": "tsc",
-    "start": "ts-node functionsExercise.ts"
+    "start": "ts-node objectsExercise.ts"
   }
 }

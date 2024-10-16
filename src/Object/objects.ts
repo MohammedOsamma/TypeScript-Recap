@@ -68,6 +68,7 @@ printSong(mySong);
 type Point = {
   x: number;
   y: number;
+  //(?) for optinal property
   z?: number;
 };
 

@@ -24,5 +24,9 @@ const cats = {
 };
 // Write a function called getProfit that accepts a single Movie object
 // It should return the movie's worldwide gross minus its budget
+const getProfit = (movie) => {
+    return movie.boxOffice.grossWorldwide - movie.boxOffice.budget;
+};
+console.log(getProfit(cats));
 // For example...
 // getProfit(cats) => -21166652

@@ -1,5 +1,18 @@
 // Write the Movie type alias to make the following two variables properly typed
 // Make sure that "originalTitle" is optional and "title" is readonly
+
+type Movie = {
+  readonly title: string;
+  originalTitle?: string;
+  director: string;
+  releaseYear: number;
+  boxOffice: {
+    budget: number;
+    grossUS: number;
+    grossWorldwide: number;
+  };
+};
+
 const dune: Movie = {
   title: "Dune",
   originalTitle: "Dune Part One",
@@ -25,6 +38,11 @@ const cats: Movie = {
 
 // Write a function called getProfit that accepts a single Movie object
 // It should return the movie's worldwide gross minus its budget
+const getProfit = (movie: Movie): number => {
+  return movie.boxOffice.grossWorldwide - movie.boxOffice.budget;
+};
+
+console.log(getProfit(cats));
 
 // For example...
 // getProfit(cats) => -21166652
